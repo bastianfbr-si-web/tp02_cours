@@ -2,7 +2,7 @@ FROM php:7.4-apache
 
 ENV COMPOSER_ALLOW_SUPERUSER=1
 
-COPY ./deploy/ /var/www/html
+COPY ./ /var/www/html
 
 WORKDIR /var/www/html
 
