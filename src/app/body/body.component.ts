@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ChildComponent } from "../child/child.component";
 
 @Component({
-  selector: 'app-body',
-  standalone: true,
-  imports: [FormsModule],
-  templateUrl: './body.component.html',
-  styleUrl: './body.component.css'
+    selector: 'app-body',
+    standalone: true,
+    templateUrl: './body.component.html',
+    styleUrl: './body.component.css',
+    imports: [FormsModule, ChildComponent]
 })
 export class BodyComponent {
   nom : string = "Bastian";
@@ -22,5 +23,9 @@ export class BodyComponent {
       this.valid = false;
       this.message = "Vous avez cliqué trop de fois !";
     }
+  }
+
+  logPrenom(event: any) {
+    console.log(event);
   }
 }

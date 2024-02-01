@@ -1,4 +1,6 @@
 <p>body works!</p>
 <button type="button" [disabled]="!valid" (click)="click()">Click</button>
+Bonjour {{nom}}
 {{message}}
 <input [(ngModel)]="nom" aria-label="input" />
+<app-child [nomChild]="nom" (change)="logPrenom($event)"></app-child>
